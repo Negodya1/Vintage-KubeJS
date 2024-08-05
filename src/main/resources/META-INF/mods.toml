@@ -1,60 +1,36 @@
 modLoader="javafml"
-loaderVersion="${loader_version_range}"
-license="${mod_license}"
-
-[[mods]]
-    modId="${mod_id}"
-    namespace="${mod_id}"
-    version="${mod_version}"
-    displayName="${mod_name}"
-    #updateJSONURL="https://change.me.example.invalid/updates.json"
-    #displayURL="https://github.com/Negodya1/Create-Vintage-Improvements"
-    #issueTrackerURL="https://github.com/Negodya1/Create-Vintage-Improvements/issues"
+loaderVersion="[43,)"
+license="MIT"
+# issueTrackerURL="https://github.com/Negodya1/Create-Vintage-Improvements/issues" #optional
+[[mods]] #mandatory
+    modId="vintage_kubejs"
+    version="1.19.2-1.0.0rc"
+    displayName="Vintage KubeJS" #mandatory
+    # displayURL="https://github.com/Negodya1/Create-Vintage-Improvements" #optional
     logoFile="logo.png"
-    credits='''reds - major coding help'''
-    authors="${mod_authors}"
-    #displayTest="MATCH_VERSION"
+    # A text field displayed in the mod UI
+    credits="reds - major coding help"
+    # A text field displayed in the mod UI
+    authors="Negodya1" #optional
+    description="KubeJS support for Create: Vintage Improvements"
 
-description="${mod_description}"
-
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.vintage_kubejs]]
     modId="forge"
     mandatory=true
-    versionRange="${forge_version_range}"
+    versionRange="[43,)"
     ordering="NONE"
     side="BOTH"
-	
 [[dependencies.vintage_kubejs]]
     modId="minecraft"
     mandatory=true
-    versionRange="${minecraft_version_range}"
+    versionRange="[1.19.2,1.20)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vintage_kubejs]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.1.e,)"
+    versionRange="[0.5.1.a,)"
     ordering="NONE"
     side="BOTH"
-
-[[dependencies.vintage_kubejs]]
-    modId="vintageimprovements"
-    mandatory=true
-    versionRange="[0.2.0.0,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.vintage_kubejs]]
-    modId = "kubejs"
-    mandatory = true
-    versionRange = "[2001.6.4-build.95,)"
-    ordering = "AFTER"
-    side = "BOTH"
-
-[[dependencies.vintage_kubejs]]
-    modId = "kubejs_create"
-    mandatory = true
-    versionRange = "[2001.2.5-build.2,)"
-    ordering = "AFTER"
-    side = "BOTH"
